@@ -1,0 +1,18 @@
+type Query {
+  getBooks: [Book]
+}
+
+type Mutation {
+  publishBook(id: ID!, title: String!, author: String!, pageCount: Int!): Book
+}
+
+type Book {
+  id: ID
+  title: String
+  author: String
+  pageCount: Int
+}
+
+type Subscription {
+  notifyBookPublish: Book
+}
